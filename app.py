@@ -12,11 +12,14 @@ import plotly.express as px
 import pandas as pd
 
 
+#Libraries
+#https://pypi.org/project/dash/
+#https://plotly.com/python/getting-started/#installation
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True)
 
+#add server
 server = app.server
-
 
 app.layout = html.Div([ # this code section taken from Dash docs https://dash.plotly.com/dash-core-components/upload
 	html.H1(
@@ -24,9 +27,7 @@ app.layout = html.Div([ # this code section taken from Dash docs https://dash.pl
 		style = {
 		'text-align':'left',
 		'color':'#6A5ACD',
-		'text-indent': '2%',
-		'animation-name': 'titleanimation',
-  		'animation-duration': '4s'
+		'text-indent': '2%'
 		}
 		),
 
@@ -44,10 +45,8 @@ app.layout = html.Div([ # this code section taken from Dash docs https://dash.pl
             'borderStyle': 'solid',
             'borderRadius': '5px',
             'textAlign': 'center',
-            'color': 'white',
-            'margin':'10',
-            'animation-name': 'buttonanimation',
-  			'animation-duration': '6s'
+            'color': '#6A5ACD',
+            'margin':'10'
         },
         # Allow multiple files to be uploaded
         multiple=True
